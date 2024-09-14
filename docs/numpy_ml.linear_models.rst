@@ -68,8 +68,8 @@ the adjusted normal equation:
     \hat{\mathbf{b}}_{Ridge} =
         (\mathbf{X}^\top \mathbf{X} + \alpha \mathbf{I})^{-1} \mathbf{X}^\top \mathbf{y}
 
-where :math:`(\mathbf{X}^\top \mathbf{X} + \alpha \mathbf{I})^{-1}
-\mathbf{X}^\top` is the pseudoinverse / Moore-Penrose inverse adjusted for
+where :math:`(\mathbf{X}^\top \mathbf{X} + \alpha \mathbf{I})^{-1}`
+is the pseudoinverse / Moore-Penrose inverse adjusted for
 the `L2` penalty on the model coefficients.
 
 **Models**
