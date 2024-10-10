@@ -79,6 +79,9 @@ class LayerBase(ABC):
         optimizer. Flush all gradients once the update is complete.
         """
         assert self.trainable, "Layer is frozen"
+        self.optimizer = (
+            self.optimizer.copy() if self.optimizer.cur_step == 0 else self.optimizer
+        )  
         self.optimizer.step()
         for k, v in self.gradients.items():
             if k in self.parameters:
